@@ -2,3 +2,5 @@
 plano y calcule e imprima el cuadrante al que pertenece dicho punto. También debe
 detectar cuando está en el origen o sobre un eje*/
 
+var x = window.prompt('Ingresa una cordenada x');
+var y = window.prompt('Ingresa una cordenada y');

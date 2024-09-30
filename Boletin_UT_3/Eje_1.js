@@ -1,25 +1,29 @@
 /*Leer de teclado una serie de nombres hasta que aparezca la palabra "ULTIMO".
-Contar cuántos nombres se han leído, cuántos comienzan C y cuántos contienen la
-ñ.*/
+Contar cuántos nombres se han leído, cuántos comienzan C y cuántos contienen la ñ.*/
 
 var nombresleidos = 0;
 var contadorc = 0;
 var contadorn = 0;
 
-var nombres = window.prompt('Ingresa una Nombre');
+var nombres = window.prompt('Ingresa una Nombre').toLocaleUpperCase();
 
 var lista = [];
 
-while(nombres.localeCompare("ultimo")){
-    if(nombres.indexOf("c")){
+while(nombres.localeCompare("ULTIMO")){
+
+    if(nombres.charAt(0) == "Ñ"){
         contadorc += 1;
     }
     
-    if(nombres.indexOf("ñ")){
+    if(nombres.charAt(0) == "C"){
         contadorn += 1;
     }
 
-    lista.push(nombres);
+    if(nombres.localeCompare("ULTIMO")){
+        lista.push(nombres);
+    }
+    
+    var nombres = window.prompt('Ingresa una Nombre').toLocaleUpperCase();
 }
 if(lista.length == 0){
     alert("No hay nombres")
