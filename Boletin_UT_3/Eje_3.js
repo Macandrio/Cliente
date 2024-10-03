@@ -6,8 +6,8 @@ aparte y las palabras son todas correctas*/
 var cadena = window.prompt('Ingresa una texto').toLocaleUpperCase();
 
 // Eliminar el punto final para contar solo las palabras
-texto = texto.slice(0, -1);
 
+texto = texto.slice(0, -1);
 
 var arraycadena = cadena.split(/\s+/);
 contadora = 0;
