@@ -3,17 +3,29 @@ un script que extraiga la cadena que se encuentra entre los paréntesis. Ejemplo
 escribimos el texto “Hola (que) tal” se mostrará “que”. Si no existe el signo “(“
 mostrará una cadena vacía y si existe el signo “(“pero no el signo “)” mostrará desde
 el primer paréntesis hasta el final.*/
-/*
-var cadena = window.prompt('Ingresa una texto'); //hola (que) tal
 
-if(cadena.indexOf("(") && cadena.indexOf(")")){
+function extraerTexto() {
+    // Pedimos al usuario que ingrese una cadena de texto
+    let texto = prompt("Introduce una cadena de texto:");
 
-    parentesis = cadena.slice(cadena.indexOf("("), cadena.indexOf(")") + 1)
-    alert(parentesis);
+    // buscar contenido entre paréntesis
+    let regexParentesis = /\(([^)]+)\)/;
+    
+    // Buscar coincidencias
+    let coincidencia = texto.match(regexParentesis);
+    
+    if (coincidencia) {
+        // Si hay coincidencias, extraer el texto dentro de los paréntesis
+        alert(coincidencia[1]);
+    } else if (texto.includes("(") && !texto.includes(")")) {
+        // Si solo hay paréntesis de apertura, mostrar desde el primer paréntesis hasta el final
+        alert(texto.substring(texto.indexOf("(")));
+    } else {
+        // Si no hay paréntesis, mostrar cadena vacía
+        alert("");
+    }
 }
 
-alert("CADENA VACIA");
-
-*/
-
+// Llamamos a la función para ejecutarla
+extraerTexto();
 
