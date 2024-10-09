@@ -1,4 +1,4 @@
 // Abrir una nueva ventana
-const nuevaVentana = window.open("", "", "width=600,height=400");
+const nuevaVentana = window.open("", "", "width=1080,height=00");
 
 
