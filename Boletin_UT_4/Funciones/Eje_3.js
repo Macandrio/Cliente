@@ -3,9 +3,9 @@ implementarse una función numCifras(numero) que devuelva el número de cifras d
 mismo. Utiliza el operador spread.*/
 
 /*---------Funcion--------*/
-function numCifras(...cifra_numero){
+function numCifras(){
 
-    var cifra = cifra_numero.length + 1;
+    var cifra = arguments.length;
     return cifra;
 }
 
