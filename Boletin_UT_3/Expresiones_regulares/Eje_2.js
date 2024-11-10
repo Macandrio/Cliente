@@ -1,18 +1,20 @@
 /*Con expresiones regulares, leer desde teclado una cadena con una serie de
 nombres. Contar cuántos nombres se han leído, cuántos comienzan C */
 
-var nombres = window.prompt('Ingresa una varios nombres');
+var nombreinput = window.prompt('Ingresa varios nombres');
 
-const nombres = input.match(/[^,]+/g);
+const nombres = nombreinput.match(/[^,]+/g) || [];
 
-let totalNombres = 0;
+let totalNombres = nombres.length;
 let nombresConC = 0;
 
-if (nombres) {
-    totalNombres = nombres.length;
+nombres.forEach(nombre => {
+    if (/^C/i.test(nombre.trim())) {    
+        nombresConC ++;
+    }
 
-    nombresConC = nombres.filter(nombre => /^C/i.test(nombre)).length;
-}
+});
 
-alert("Hay " + resultado)
+document.write("Hay " + totalNombres + " nombres y " + nombresConC + " que empiezan con 'C'");
+
 

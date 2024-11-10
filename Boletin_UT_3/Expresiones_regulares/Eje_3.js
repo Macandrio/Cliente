@@ -3,21 +3,14 @@ ellas empiezan por A. Suponemos que una palabra está separada de otra por uno o
 más espacios, un tabulador y el texto acaba con un punto, no existe ningún punto y
 aparte y las palabras son todas correctas*/
 
-var cadena = window.prompt('Ingresa una texto').toLocaleUpperCase();
+var texto = window.prompt('Ingresa un texto que termine con un punto').trim();
 
-// Eliminar el punto final para contar solo las palabras
+// Expresión regular para encontrar palabras (separadas por espacios/tabuladores y terminando con un punto)
+const palabras = texto.match(/\b\w+\b/g) || [];  // \b indica límite de palabra
 
-texto = texto.slice(0, -1);
+// Contar palabras que empiezan con 'A' o 'a'
+const palabrasConA = (texto.match(/\bA\w*/gi) || []).length;  // \bA indica que comienza con 'A', \w* captura el resto de la palabra
 
-var arraycadena = cadena.split(/\s+/);
-contadora = 0;
+document.write("El texto tiene " + palabras.length + " palabras y " + palabrasConA + " que comienzan con 'A'");
 
-
-for (var i = 0; i < arraycadena.length; i++) {
-    
-    if(arraycadena[i].charAt(0) === "A"){
-        contadora ++;
-    }
-}
-
-alert("Total de palabras: " + arraycadena.length + "Palabras que empiezan con 'A': " + contadora);
+"Ana aprende a programar en JavaScript. Ayer habló con Andrés sobre algoritmos avanzados. Este texto termina con un punto."

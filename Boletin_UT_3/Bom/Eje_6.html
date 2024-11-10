@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de Ventana Flotante</title>
+</head>
+<body>
+    <h1>Control de Ventana Flotante</h1>
+    <button onclick="abrirVentana()">Abrir Ventana Flotante</button>
+    <button onclick="cerrarVentana()">Cerrar Ventana Flotante</button>
+    <button onclick="darFoco()">Dar Foco a la Ventana</button>
+    <button onclick="quitarFoco()">Quitar Foco de la Ventana</button>
+    <button onclick="scrollAbsoluto()">Scroll Absoluto (0, 1000)</button>
+    <button onclick="scrollRelativo()">Scroll Relativo (0, 10)</button>
+
+    <script>
+        var ventanaFlotante;
+
+        function abrirVentana() {
+            if (!ventanaFlotante || ventanaFlotante.closed) {
+                ventanaFlotante = window.open("", "ventanaSecundaria", "width=400,height=300,resizable=yes,scrollbars=yes");
+                ventanaFlotante.document.write("<!DOCTYPE html><html><head><title>Ventana Secundaria</title></head><body>");
+                ventanaFlotante.document.write("<h2>Ventana Flotante</h2>");
+                ventanaFlotante.document.write("<button onclick='window.moveTo(500,150)'>Mover Absoluto (500, 150)</button>");
+                ventanaFlotante.document.write("<button onclick='window.moveBy(0,50)'>Mover Relativo (0, 50)</button>");
+                ventanaFlotante.document.write("<button onclick='window.resizeTo(500,500)'>Redimensionar Absoluto (500, 500)</button>");
+                ventanaFlotante.document.write("<button onclick='window.resizeBy(-50,-50)'>Redimensionar Relativo (-50, -50)</button>");
+                ventanaFlotante.document.write("</body></html>");
+                ventanaFlotante.focus();
+            } else {
+                ventanaFlotante.focus();
+            }
+        }
+
+        function cerrarVentana() {
+            if (ventanaFlotante) {
+                ventanaFlotante.close();
+            } else {
+                alert("La ventana flotante no está abierta.");
+            }
+        }
+
+        function darFoco() {
+            if (ventanaFlotante && !ventanaFlotante.closed) {
+                ventanaFlotante.focus();
+            } else {
+                alert("La ventana flotante no está abierta.");
+            }
+        }
+
+        function quitarFoco() {
+            if (ventanaFlotante && !ventanaFlotante.closed) {
+                window.focus();  // Da foco a la ventana principal
+            } else {
+                alert("La ventana flotante no está abierta.");
+            }
+        }
+
+        function scrollAbsoluto() {
+            if (ventanaFlotante && !ventanaFlotante.closed) {
+                ventanaFlotante.scrollTo(0, 1000);
+            } else {
+                alert("La ventana flotante no está abierta.");
+            }
+        }
+
+        function scrollRelativo() {
+            if (ventanaFlotante && !ventanaFlotante.closed) {
+                ventanaFlotante.scrollBy(0, 10);
+            } else {
+                alert("La ventana flotante no está abierta.");
+            }
+        }
+    </script>
+</body>
+</html>
