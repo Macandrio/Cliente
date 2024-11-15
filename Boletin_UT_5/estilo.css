@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.input-group.row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.input-group.row input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.input-group input[type="number"] {
+    max-width: 80px;
+}
+
+.username-group {
+    display: flex;
+    align-items: center;
+}
+
+.username-group input {
+    flex: 1;
+}
+
+.username-group span {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #777;
+}
+
+.fecha-group {
+    display: flex;
+    gap: 5px;
+}
+
+.fecha-group input {
+    max-width: 80px;
+}
+
+.telefono-group {
+    display: flex;
+    align-items: center;
+}
+
+.telefono-group .flag {
+    margin-right: 8px;
+}
