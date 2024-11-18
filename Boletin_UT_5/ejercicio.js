@@ -1,8 +1,4 @@
-window.addEventListener('load', inicializar, flase);
-
-function inicializar(){
-    
-}
+window.addEventListener('load', formulario, flase);
 
 function recogerDatos() {
     // Seleccionar los elementos por su id
