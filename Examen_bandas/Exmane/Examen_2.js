@@ -11,7 +11,7 @@ function ordenarBandasPorAño(gestion){
 }
 
 function buscarBandaPorNombre(nombre , gestion){
-    if(gestion.includes(nombre)){
+    if(gestion.includes(banda => banda.nombre === nombre)){
         document.write('Se ha encontrado un grupo')
         document.write(banda[banda.indexOf(banda => banda.nombre === nombre)])
     }
