@@ -369,7 +369,10 @@ document.write(arr); // [3, 2, 1]
 arr = ['a', 'b', 'c'];
 document.write(arr.join('-')); // "a-b-c"
 
-
+//Verificar si un valor existe en el array
+nombres = ["Alice", "Bob", "Charlie"];
+var existeBob = nombres.some(nombre => nombre === "Bob");
+console.log(existeBob); // true
 
 
 
