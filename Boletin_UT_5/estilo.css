@@ -92,3 +92,7 @@ form {
 .telefono-group .flag {
     margin-right: 8px;
 }
+
+#texto {
+    white-space: pre-line; /* Respeta los saltos de línea (\n) */
+}
