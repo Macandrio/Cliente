@@ -96,3 +96,8 @@ form {
 #texto {
     white-space: pre-line; /* Respeta los saltos de línea (\n) */
 }
+
+.edad{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
