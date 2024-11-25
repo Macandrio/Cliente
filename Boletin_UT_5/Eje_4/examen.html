@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Tipo Test</title>
+    <script src="Eje_4.js" defer></script>
+</head>
+<body>
+    <div class="quiz-container" id="examen">
+        <h1>Examen Tipo Test</h1>
+        <!-- Pregunta 1 -->
+        <div class="pregunta">
+            <p>1. ¿Cuál es la capital de España?</p>
+            <input type="radio" id="q1-madrid" name="q1" value="Madrid">
+            <label for="q1-madrid">Madrid</label><br>
+            <input type="radio" id="q1-barcelona" name="q1" value="Barcelona">
+            <label for="q1-barcelona">Barcelona</label><br>
+            <input type="radio" id="q1-valencia" name="q1" value="Valencia">
+            <label for="q1-valencia">Valencia</label><br>
+            <input type="radio" id="q1-sevilla" name="q1" value="Sevilla">
+            <label for="q1-sevilla">Sevilla</label><br>
+        </div>
+
+        <!-- Resultado de la pregunta 1 -->
+        <p id="resultado-q1" class="resultado"></p>
+
+        <!-- Pregunta 2 -->
+        <div class="pregunta">
+            <p>2. ¿Cuál es el río más largo del mundo?</p>
+            <input type="radio" id="q2-nilo" name="q2" value="Nilo">
+            <label for="q2-nilo">Nilo</label><br>
+            <input type="radio" id="q2-amazonas" name="q2" value="Amazonas">
+            <label for="q2-amazonas">Amazonas</label><br>
+            <input type="radio" id="q2-mississippi" name="q2" value="Mississippi">
+            <label for="q2-mississippi">Mississippi</label><br>
+            <input type="radio" id="q2-yangtsé" name="q2" value="Yangtsé">
+            <label for="q2-yangtsé">Yangtsé</label><br>
+        </div>
+
+        <!-- Resultado de la pregunta 2 -->
+        <p id="resultado-q2" class="resultado"></p>
+
+        <button id="enviar" type="click">Enviar</button>
+    </div>
+</body>
+</html>
