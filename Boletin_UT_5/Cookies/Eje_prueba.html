@@ -33,7 +33,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], input[type="number"], button {
+        input[type="text"], input[type="number"], select, button {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -63,17 +63,16 @@
                 <input type="number" id="room" name="room" placeholder="Número de habitación" required>
             </div>
             <div class="form-group">
-                <label>Selecciona tu café favorito:</label>
-                <input type="checkbox" id="espresso" name="coffee" value="espresso">
-                <label for="espresso">Espresso</label><br>
-                <input type="checkbox" id="latte" name="coffee" value="latte">
-                <label for="latte">Latte</label><br>
-                <input type="checkbox" id="capuccino" name="coffee" value="capuccino">
-                <label for="capuccino">Capuccino</label><br>
-                <input type="checkbox" id="moka" name="coffee" value="moka">
-                <label for="moka">Moka</label><br>
+                <label for="coffee">Elige tu café:</label>
+                <select id="coffee" name="coffee" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option type="radio" value="espresso" name="q1">Espresso</option>
+                    <option type="radio" value="latte" id="q1-Latte" name="q1">Latte</option>
+                    <option type="radio" value="capuccino" id="q1-Capuccino" name="q1">Capuccino</option>
+                    <option type="radio" value="americano" id="q1-Americano" name="q1">Americano</option>
+                </select>
             </div>
-            <button id="enviar" type="button">Enviar Pedido</button>
+            <button id="enviar" type="click">Enviar Pedido</button>
         </form>
     </div>
 </body>
