@@ -30,7 +30,7 @@ function recogerDatos(event) {
         // Manejar conteo de pedidos
         var conteoPedidos = parseInt(getCookie('conteo_pedidos')) || 0;
         conteoPedidos++;
-        document.cookie = `conteo_pedidos=${conteoPedidos}; path=/; max-age=86400`;
+        document.cookie = "conteo_pedidos=" + conteoPedidos + "; path=/; max-age=86400";
 
         if (conteoPedidos % 4 === 0) {
             alert("¡Felicidades! Este es tu cuarto café, tu próximo café será gratuito.");
