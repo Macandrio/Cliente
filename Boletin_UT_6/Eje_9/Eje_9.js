@@ -8,13 +8,21 @@ function inicializar() {
 
 function ocultarinformacion (e){
     var imagen = e.currentTarget;
-    imagen.childNodes.forEach( hijo => )
+    imagen.parentNode.childNodes.forEach( hijo => {
+        if(hijo.getAttribute('style') == 'display:none' && hijo != hijo.parentNode.childNodes[0]){
+            hijo.setAttribute('style', 'display:block'); // Mostrar
+        }else{
+            if(hijo != hijo.parentNode.childNodes[0]){
+                hijo.setAttribute('style', 'display:none'); // Ocultar
+            }
+        }
+    })
 
 
 }
 
 function json(){
-var json = 
+    var json = 
             [
                 {src:"https://inmofotos.es/wp-content/uploads/2021/10/imagen-1_Mesa-de-trabajo-1.jpg", desc: "descripcion1", specs: ["spec11", "spec12"]},
                 {src:"https://img.freepik.com/foto-gratis/retrato-hombre-estilo-dibujos-animados_23-2151134275.jpg", desc: "descripcion2", specs: ["spec21", "spec22"]},
@@ -47,9 +55,11 @@ var json =
         listaimg.appendChild(imagenes);
         imagenes.setAttribute('src', elemento.src)
         imagenes.setAttribute('style', 'height:150px')
+        imagenes.setAttribute('id','imagen')
 
         // . Crear un nodo <p> y asignarlo al li
         var p = document.createElement('p');
+        p.textContent = elemento.desc;
         listaimg.appendChild(p);
 
         // . Crear un nodo <ul> y asignarlo al li

@@ -37,6 +37,7 @@ var json =
 
         // . Crear un nodo <p> y asignarlo al li
         var p = document.createElement('p');
+        p.textContent = elemento.desc;
         listaimg.appendChild(p);
 
         // . Crear un nodo <ul> y asignarlo al li
