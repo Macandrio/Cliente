@@ -16,7 +16,7 @@ function recogerDatos(){
         var seleccionado = null;
 
         opciones.forEach(element => {
-            if(element.checked){
+            if(element.checked){ //checked => es el que esta pulsado
                 seleccionado = element;
             }
         });

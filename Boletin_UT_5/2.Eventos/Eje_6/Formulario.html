@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Eje_6.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Nombre en Mayúsculas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario: Nombre en Mayúsculas</h1>
+    <form id="formulario">
+        <label for="nombre">Escribe tu nombre en mayúsculas:</label>
+        <input id="nombre" type="text" placeholder="Escribe tu nombre aquí">
+        <p id="mensajeError" class="error"></p>
+        <!-- Botón de envío como imagen -->
+        <input id="enviar" type="image" src="https://cdn-icons-png.flaticon.com/512/60/60525.png" alt="Enviar">
+    </form>
+</body>
+</html>
