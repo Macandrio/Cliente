@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="Eje_3.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Edad</title>
+    <style>
+        label, input {
+            margin: 5px 0;
+            display: block;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="registro">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" type="text" placeholder="Escribe tu nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input id="apellidos" type="text" placeholder="Escribe tus apellidos" required>
+
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input id="fechaNacimiento" type="date" required>
+            <label for="edad">Edad:</label>
+            <input id="edad" type="text" placeholder="Edad" readonly>
+        </div>
+
+        <button id="enviar" type="button">Calcular Edad</button>
+    </form>
+</body>
+</html>

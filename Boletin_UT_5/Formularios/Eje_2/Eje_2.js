@@ -3,11 +3,11 @@
 window.addEventListener('load', inicializar);
 
 function inicializar() {
-    document.getElementById('enviar').addEventListener('click',recogerDatos)
+    document.getElementById('enviar').addEventListener('click',recogerDatos) //Busca un elemento del html que tenga el id=enviar se ejecuta cuando haga click en la accion
 }
 
 function recogerDatos() {
-    var nombre = document.getElementById('nombre').value.toUpperCase();
+    var nombre = document.getElementById('nombre').value.toUpperCase(); //recoje los valores de cada id con .value
     var apellidos = document.getElementById('apellidos').value.toUpperCase();
     var usuario = document.getElementById('usuario').value.toUpperCase();
     var contraseña = document.getElementById('contraseña').value.toUpperCase();
@@ -18,14 +18,16 @@ function recogerDatos() {
     var telefono = document.getElementById('telefono').value.toUpperCase();
     var email = document.getElementById('email').value.toUpperCase();
 
+    //Abre una ventana nueva vacia
     var nuevaVentana = window.open(
         "", 
         "ventanaNueva", 
         "width=400,height=200,top=0,left=0,resizable=yes,scrollbars=yes"
     );
 
+    //Añade los datos
     nuevaVentana.document.write(
-        'Esto son los resultados en Myusculas<br>' +
+        'Esto son los resultados en Mayusculas<br>' +
         nombre + "<br>" +
         apellidos + "<br>" +
         usuario + "<br>" +
