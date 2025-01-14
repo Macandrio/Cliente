@@ -2,7 +2,7 @@ window.addEventListener('load', inicializar);
 
 function inicializar() {
     json();
-    [...document.getElementsByTagName('img')].forEach(elemento => elemento.addEventListener('click',ocultarinformacion));
+    document.getElementsByTagName('img').forEach(elemento => elemento.addEventListener('click',ocultarinformacion));
 
 }
 
