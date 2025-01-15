@@ -7,6 +7,7 @@ function inicializar() {
 }
 
 function ocultarinformacion (e){
+    
     var imagen = e.currentTarget;
     imagen.parentNode.childNodes.forEach( hijo => {
         if(hijo.getAttribute('style') == 'display:none' && hijo != hijo.parentNode.childNodes[0]){

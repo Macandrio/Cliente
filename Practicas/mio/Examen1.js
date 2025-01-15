@@ -2,11 +2,6 @@ window.addEventListener('load', inicializar);
 
 function inicializar() {
     document.getElementById('mostrar').addEventListener('click',ocultarinformacion);
-    document.getElementsByTagName('img').addEventListener('mouseenter',añadirclase);
-}
-
-function añadirclase(e){
-    var span = e.currentTarget
 }
 
 function ocultarinformacion(){
@@ -94,6 +89,9 @@ function ocultarinformacion(){
             var lista_img = document.createElement('img');
             lista_img.setAttribute('src', viaje.ruta_imagen)
             lista_li_2.appendChild(lista_img);
+
+            imagen.addEventListener('mousemove', () => detalle.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;'));
+            imagen.addEventListener('mouseleave', () => detalle.setAttribute('style', ''));
     
             // . Crear un nodo <span> y asignarlo al li
             var lista_span_2 = document.createElement('span');
@@ -101,12 +99,9 @@ function ocultarinformacion(){
             lista_li_2.appendChild(lista_span_2);
         
 
-             // Añadir eventos a la imagen y pie
-            // lista_img.addEventListener('mouseenter', () => lista_span.classList.add('destacado'));
-            // lista_img.addEventListener('mouseleave', () => lista_span.classList.remove('destacado'));
- 
-            // lista_span_2.addEventListener('mouseenter', () => lista_span.classList.add('destacado'));
-            // lista_span_2.addEventListener('mouseleave', () => lista_span.classList.remove('destacado'));
+            pieImagen.addEventListener('mousemove', () => detalle.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;'));
+            pieImagen.addEventListener('mouseleave', () => detalle.setAttribute('style', ''));
+
 
         });
     }
