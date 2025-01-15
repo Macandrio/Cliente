@@ -2,8 +2,12 @@ window.addEventListener('load', inicializar);
 
 function inicializar() {
     document.getElementById('mostrar').addEventListener('click',ocultarinformacion);
+    document.getElementsByTagName('img').addEventListener('mouseenter',añadirclase);
 }
 
+function añadirclase(e){
+    var span = e.currentTarget
+}
 
 function ocultarinformacion(){
 
@@ -14,7 +18,7 @@ function ocultarinformacion(){
             "detalle_precio_total":"1,899",
             "detalle_num_noches":7,
             "precio_noche":275,
-            "ruta_imagen":"./photos/newyork.jpg",
+            "ruta_imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLrq4s4xwmnVwnLBDcBPH7CZY4SSto1DoDA&s",
             "pie_imagen":"Puente Brooklyn"
         },
 
@@ -24,7 +28,7 @@ function ocultarinformacion(){
             "detalle_precio_total":"1,499",
             "detalle_num_noches":5,
             "precio_noche":300,
-            "ruta_imagen":"./photos/paris.jpg",
+            "ruta_imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRujQ3RB6QkdaK5g_Tewt_LFEuBQ7-hHRwFQ&s",
             "pie_imagen":"Notre Dame de Paris"
         },
 
@@ -34,13 +38,13 @@ function ocultarinformacion(){
             "detalle_precio_total":"2,199",
             "detalle_num_noches":5,
             "precio_noche":440,
-            "ruta_imagen":"./photos/london.jpg",
+            "ruta_imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRujQ3RB6QkdaK5g_Tewt_LFEuBQ7-hHRwFQ&s",
             "pie_imagen":"Torre de Londres"
         }
     ]
 
     var mostrar_ocultar = document.getElementById('mostrar');
-    var oculto = document.querySelector('ul');
+    var oculto = [...document.getElementsByTagName('ul')][0];
     
     
     if(oculto){
@@ -95,10 +99,16 @@ function ocultarinformacion(){
             var lista_span_2 = document.createElement('span');
             lista_span_2.textContent = viaje.pie_imagen; // . añadir el texto
             lista_li_2.appendChild(lista_span_2);
-    
+        
+
+             // Añadir eventos a la imagen y pie
+            // lista_img.addEventListener('mouseenter', () => lista_span.classList.add('destacado'));
+            // lista_img.addEventListener('mouseleave', () => lista_span.classList.remove('destacado'));
+ 
+            // lista_span_2.addEventListener('mouseenter', () => lista_span.classList.add('destacado'));
+            // lista_span_2.addEventListener('mouseleave', () => lista_span.classList.remove('destacado'));
+
         });
-
-
     }
       
 }

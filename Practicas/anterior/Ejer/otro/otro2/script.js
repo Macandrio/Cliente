@@ -12,7 +12,7 @@ function toggleViajes() {
             "detalle_precio_total":"1,899",
             "detalle_num_noches":7,
             "precio_noche":275,
-            "ruta_imagen":"https://upload.wikimedia.org/wikipedia/commons/3/31/LOC_Brooklyn_Bridge_and_East_River_7.png",
+            "ruta_imagen":" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLrq4s4xwmnVwnLBDcBPH7CZY4SSto1DoDA&s ",
             "pie_imagen":"Puente Brooklyn"
         },
         
@@ -22,7 +22,7 @@ function toggleViajes() {
             "detalle_precio_total":"1,499",
             "detalle_num_noches":5,
             "precio_noche":300,
-            "ruta_imagen":"./photos/paris.jpg",
+            "ruta_imagen":"C:\Users\aleja\OneDrive\Escritorio\paris.jpg",
             "pie_imagen":"Notre Dame de Paris"
         },
 
