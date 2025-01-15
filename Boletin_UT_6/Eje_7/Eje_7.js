@@ -9,7 +9,7 @@ function borrarinsertar() {
   var tablaContainer = document.getElementById('tabla-container');
 
   // Verificar si ya existe una tabla
-  var tablaExistente = document.querySelector('table');
+  var tablaExistente = [...document.getElementsByTagName("table")][0];
 
   if (tablaExistente) {
     // Si la tabla existe, eliminarla
