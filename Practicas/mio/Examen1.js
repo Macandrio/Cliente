@@ -7,6 +7,7 @@ function inicializar() {
 function reserva(){
     var nombre_reserva = prompt('Escriba su reserva');
     if(nombre_reserva){
+        document.cookie = 'nombre=' + nombre + '; max-age=86400; path=/';
         alert('Se a Guardado tu reserva correctamente ' + nombre_reserva);
     }else{
         alert('Debe introducir un nombre para la reserva')
