@@ -56,12 +56,13 @@ function ocultarinformacion(){
         mostrar_ocultar.textContent = 'Mostrar Viajes'
     }else{
         
+        mostrar_ocultar.textContent = 'Ocultar Viajes'
+        
         //creo la lista y la añado al body    
         var lista = document.createElement('ul');
         document.body.appendChild(lista);
 
         viajes.forEach(viaje => {
-            mostrar_ocultar.textContent = 'Ocultar Viajes'
 
             // . Crear un nodo <li> y asignarlo al ul
             var lista_li = document.createElement('li');
