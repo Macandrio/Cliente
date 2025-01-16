@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contenedor.papelera {
+            border-color: red;
+            color: red;
+        }
+
+        .elemento {
+            padding: 10px;
+            margin: 5px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 5px;
+            cursor: grab;
+        }
+
+        .elemento:active {
+            cursor: grabbing;
+        }
+
+        .contenedor.over {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor1" class="contenedor">
+        <h3>Contenedor 1</h3>
+    </div>
+    <div id="contenedor2" class="contenedor">
+        <h3>Contenedor 2</h3>
+    </div>
+    <div id="contenedor3" class="contenedor">
+        <h3>Contenedor 3</h3>
+        <div class="elemento" draggable="true">Elemento 1</div>
+        <div class="elemento" draggable="true">Elemento 2</div>
+        <div class="elemento" draggable="true">Elemento 3</div>
+    </div>
+    <div id="papelera" class="contenedor papelera">
+        <h3>Papelera</h3>
+    </div>
+
+    <script src="Ejer_14.js"></script>
+</body>
+</html>

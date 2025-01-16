@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Copiar Elemento entre Contenedores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 200px;
+            height: 300px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .contenedor.destino {
+            border-color: blue;
+        }
+
+        .elemento {
+            padding: 10px;
+            margin: 5px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 5px;
+            cursor: grab;
+        }
+
+        .contenedor.over {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="origen" class="contenedor">
+        <h3>Contenedor Origen</h3>
+        <div class="elemento" draggable="true">Elemento a copiar</div>
+    </div>
+    <div id="destino" class="contenedor destino">
+        <h3>Contenedor Destino</h3>
+    </div>
+
+    <script src="Ejer_15.js"></script>
+</body>
+</html>
