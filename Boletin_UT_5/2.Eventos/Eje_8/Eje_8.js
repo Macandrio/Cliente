@@ -39,5 +39,6 @@ function validarFormulario(event) {
     mensajeError.textContent = "";
     alert("Formulario enviado correctamente.");
     // Aquí puedes enviar el formulario al servidor
+    //const regexCodigo = /^[A-Z]{3}-\d{1,5}$/;
     event.target.submit(); // Enviar formulario si todo está correcto
 }
