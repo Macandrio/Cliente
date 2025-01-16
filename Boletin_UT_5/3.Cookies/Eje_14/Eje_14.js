@@ -23,7 +23,7 @@ function recogerDatos(event) {
 
     if (nombre && numero_habitacion && seleccionados.length > 0) {
         // Crear cookies para cada valor ingresado
-        document.cookie = `nombre=${nombre}; path=/; max-age=86400`; // Expira en 1 día (86400 segundos)
+        document.cookie = 'nombre=' + nombre; 'path=/'; 'max-age=86400'; // Expira en 1 día (86400 segundos)
         document.cookie = `numero_habitacion=${numero_habitacion}; path=/; max-age=86400`;
         document.cookie = `cafe_favorito=${seleccionados.join(',')}; path=/; max-age=86400`;
 
