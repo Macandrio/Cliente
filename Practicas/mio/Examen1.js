@@ -4,6 +4,15 @@ function inicializar() {
     document.getElementById('mostrar').addEventListener('click',ocultarinformacion);
 }
 
+function reserva(){
+    var nombre_reserva = prompt('Escriba su reserva');
+    if(nombre_reserva){
+        alert('Se a Guardado tu reserva correctamente ' + nombre_reserva);
+    }else{
+        alert('Debe introducir un nombre para la reserva')
+    }
+}
+
 function ocultarinformacion(){
 
     var viajes = [
@@ -56,7 +65,7 @@ function ocultarinformacion(){
 
             // . Crear un nodo <li> y asignarlo al ul
             var lista_li = document.createElement('li');
-            lista_li.className = 'viaje' + viaje.clase_pais; // . añadir la clase
+            lista_li.setAttribute('class', 'viaje' + viaje.clase_pais); // . añadir la clase
             lista.appendChild(lista_li);
     
             // . Crear un nodo <h2> y asignarlo al li
@@ -66,19 +75,20 @@ function ocultarinformacion(){
     
             // . Crear un nodo <span> y asignarlo al li
             var lista_span = document.createElement('span');
-            lista_span.className = 'detalle'; // . añadir la clase
+            lista_span.setAttribute('class','detalle'); // . añadir la clase
             lista_span.textContent = viaje.detalle_precio_total + ' por ' + viaje.detalle_num_noches + ' noches '; // . añadir el texto
             lista_li.appendChild(lista_span);
     
             // . Crear un nodo <button> y asignarlo al li
             var lista_button = document.createElement('button');
-            lista_button.className = 'reserva'; // . añadir la clase
+            lista_button.setAttribute('class','reserva'); // . añadir la clase
             lista_button.textContent = 'Reserva ya'; // . añadir el texto
+            lista_button.addEventListener('click' , reserva);
             lista_li.appendChild(lista_button);
     
             // . Crear un nodo <ul> y asignarlo al li
             var lista_ul = document.createElement('ul');
-            lista_ul.className = 'fotos'; // . añadir la clase
+            lista_ul.setAttribute('class','fotos'); // . añadir la clase
             lista_li.appendChild(lista_ul);
     
             // . Crear un nodo <li> y asignarlo al ul
@@ -90,8 +100,14 @@ function ocultarinformacion(){
             lista_img.setAttribute('src', viaje.ruta_imagen)
             lista_li_2.appendChild(lista_img);
 
-            imagen.addEventListener('mousemove', () => detalle.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;'));
-            imagen.addEventListener('mouseleave', () => detalle.setAttribute('style', ''));
+            lista_img.addEventListener('mousemove', function () {
+                                                            lista_span.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;');
+                                                            lista_span.textContent = viaje.precio_noche + ' por noche';
+                                                        });
+            lista_img.addEventListener('mouseleave', function () {
+                                                            lista_span.setAttribute('style', '');
+                                                            lista_span.textContent = viaje.detalle_precio_total + ' por ' + viaje.detalle_num_noches + ' noches ';
+                                                        });
     
             // . Crear un nodo <span> y asignarlo al li
             var lista_span_2 = document.createElement('span');
@@ -99,8 +115,14 @@ function ocultarinformacion(){
             lista_li_2.appendChild(lista_span_2);
         
 
-            pieImagen.addEventListener('mousemove', () => detalle.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;'));
-            pieImagen.addEventListener('mouseleave', () => detalle.setAttribute('style', ''));
+            lista_span_2.addEventListener('mousemove', function () {
+                lista_span.setAttribute('style', 'font-weight: bold; text-decoration: underline; text-decoration-color: red;');
+                lista_span.textContent = viaje.precio_noche + ' por noche';
+            });
+            lista_span_2.addEventListener('mouseleave', function () {
+                lista_span.setAttribute('style', '');
+                lista_span.textContent = viaje.detalle_precio_total + ' por ' + viaje.detalle_num_noches + ' noches ';
+            });
 
 
         });
